@@ -79,6 +79,7 @@ const css = `
     .tabs_nav .tabs_list .tab_icon {
         right: auto !important;
         left: 7px !important;
+        z-index: 2 !important;
         color: #333 !important;
     }
     .tabs_nav .tabs_list .tab_icon:hover {
