@@ -84,7 +84,7 @@ const css = `
         background-color: #aaa !important;
     }
     .tabs_nav .tabs_borderShim {
-        border-color: #666 !important;
+        border-color: #ccc !important;
     }
 `;
 exports.decorateConfig = config => {
