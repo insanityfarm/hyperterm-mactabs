@@ -12,7 +12,6 @@ const css = `
         right: 0 !important;
     }
     .tabs_nav {
-        border-bottom: 1px solid #cacaca !important;
         background: linear-gradient(to bottom, #ececec 0%,#e2e2e2 100%) !important;
     }
     .tabs_nav .tabs_title {
@@ -60,9 +59,6 @@ const css = `
         color: #333 !important;
         background: linear-gradient(to bottom, #efefef 0%,#eaeaea 100%) !important;
     }
-    .tabs_nav .tabs_list {
-        border-bottom: 1px solid #cacaca !important;
-    }
     .tabs_nav .tabs_list .tab_active {
         background: linear-gradient(to bottom, #fff 0%,#f3f3f3 100%) !important;
     }
@@ -86,7 +82,10 @@ const css = `
         color: #fff !important;
         padding: 4px !important;
         background-color: #aaa !important;
-    }}
+    }
+    .tabs_nav .tabs_borderShim {
+        border-color: #666 !important;
+    }
 `;
 exports.decorateConfig = config => {
     return Object.assign({}, config, {
