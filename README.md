@@ -10,4 +10,4 @@ How to use
 
 Add `hyperterm-mactabs` to `plugins` in `~/.hyper.js`. Hyper.app should automatically load the plugin. If it does not, perform a "Full Reload" for the change to take effect.
 
-[Hyper.app]: https://hyper.isg/
+[Hyper.app]: https://hyper.is/
