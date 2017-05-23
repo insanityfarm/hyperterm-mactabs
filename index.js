@@ -35,15 +35,12 @@ const css = `
         width: 256px !important;
         position: absolute !important;
         top: 0 !important;
-        bottom: 0 !important;
+        bottom: 1px !important;
         z-index: 1 !important;
     }
     .tabs_nav .tab_tab.tab_first:after {
         left: -257px !important;
         right: auto !important;
-    }
-    .tabs_nav .tab_tab.tab_first.tab_active:after {
-        left: -256px !important;
     }
     .tabs_nav .tab_tab:last-of-type:after {
         right: -257px !important;
@@ -90,5 +87,12 @@ const css = `
 exports.decorateConfig = config => {
     return Object.assign({}, config, {
         css: (config.css || '') + css
+    });
+}
+exports.decorateBrowserOptions = defaults => {
+    return Object.assign({}, defaults, {
+    	titleBarStyle: '',
+    	transparent: true,
+    	frame: false
     });
 }
