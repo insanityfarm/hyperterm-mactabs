@@ -35,7 +35,7 @@ const css = `
     }
     .tabs_nav .tabs_title, .tabs_nav .tab_tab {
         color: #333 !important;
-        font-family: "Lucida Grande" !important;
+        font-family: "San Francisco", "Helvetica Neue", "Lucida Grande" !important;
         border-color: #cacaca !important;
         background: linear-gradient(to bottom, rgba(236,236,236,${tabBarOpacity}) 0%,rgba(226,226,226,${tabBarOpacity}) 100%) !important;
     }
