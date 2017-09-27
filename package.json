@@ -1,7 +1,8 @@
 {
   "name": "hyperterm-mactabs",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Better tab styles for Hyper.app on macOS",
+  "keywords": "hyper mac osx macos tabs hyperterm", 
   "main": "index.js",
   "repository": {
     "type": "git",
