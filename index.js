@@ -92,7 +92,7 @@ exports.decorateConfig = config => {
 exports.decorateBrowserOptions = defaults => {
     return Object.assign({}, defaults, {
     	titleBarStyle: 'hiddenInset',
-    	transparent: true,
+    	transparent: false,
     	frame: false
     });
 }
