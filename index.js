@@ -1,6 +1,7 @@
 'use strict'
 
 const tabShadowSize = '15px';
+const titleBarStyle = 'hidden'; // or 'hiddenInset'
 const css = `
     .hyperterm_main {
         border: none !important;
@@ -13,9 +14,10 @@ const css = `
     }
     .tabs_nav {
         background: linear-gradient(to bottom, #ececec 0%,#e2e2e2 100%) !important;
+        height: ${titleBarStyle === 'hidden' ? '22px' : '34px'} !important;
     }
     .tabs_nav .tabs_title {
-        height: 34px !important;
+        height: ${titleBarStyle === 'hidden' ? '22px' : '34px'} !important;
         border-bottom: 1px solid #cacaca !important;
     }
     .tabs_nav .tabs_title, .tabs_nav .tab_tab {
@@ -23,6 +25,7 @@ const css = `
         font-family: "Lucida Grande" !important;
         border-color: #cacaca !important;
         background: linear-gradient(to bottom, #ececec 0%,#e2e2e2 100%) !important;
+        line-height: ${titleBarStyle === 'hidden' ? '22px' : '34px'} !important;
     }
     .tabs_nav .tab_tab:not(.tab_active) {
         color: #888 !important;
@@ -74,6 +77,7 @@ const css = `
         left: 7px !important;
         z-index: 2 !important;
         color: #333 !important;
+        top: ${titleBarStyle === 'hidden' ? '4px' : '10px'} !important;
     }
     .tabs_nav .tabs_list .tab_icon:hover {
         color: #fff !important;
@@ -83,6 +87,9 @@ const css = `
     .tabs_nav .tabs_borderShim {
         border-color: #ccc !important;
     }
+    .terms_terms {
+        margin-top: ${titleBarStyle === 'hidden' ? '22px' : '34px'};
+    }
 `;
 exports.decorateConfig = config => {
     return Object.assign({}, config, {
@@ -91,7 +98,7 @@ exports.decorateConfig = config => {
 }
 exports.decorateBrowserOptions = defaults => {
     return Object.assign({}, defaults, {
-    	titleBarStyle: 'hiddenInset',
+    	titleBarStyle,
     	transparent: false,
     	frame: false
     });
